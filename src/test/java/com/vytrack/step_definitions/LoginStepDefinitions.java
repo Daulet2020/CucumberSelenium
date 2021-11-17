@@ -28,6 +28,17 @@ public class LoginStepDefinitions {
         System.out.println("Loginn as sales manager");
 
     }
+    //     Then user enters "storemanager85" username and "wrong" password
+    @Then("user enters {string} username and {string} password")
+    public void user_enters_username_and_password(String string, String string2) {
+        System.out.println("Login with "+string+" username and "+string2+" password.");
+    }
+
+    @Then("user verify that {string} message is displayed")
+    public void user_verify_that_message_is_displayed(String string) {
+        System.out.println("Verified that warning message is displayed: "+string);
+
+    }
 
 
 

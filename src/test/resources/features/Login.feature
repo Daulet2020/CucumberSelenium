@@ -7,7 +7,7 @@ Feature: Login
     And user verifies that "Dashboard" page subtitle is displayed
 
   Scenario: Login as store driver
-     Given user is on the login page
+    Given user is on the login page
     Then user logs in as driver
     And user verifies that "Dashboard" page subtitle is displayed
 
@@ -15,3 +15,8 @@ Feature: Login
     Given user is on the login page
     Then user logs in as sales manager
     And user verifies that "Dashboard" page subtitle is displayed
+
+   Scenario: Verify that warning message is displayed when password not correct
+     Given user is on the login page
+     Then user enters "storemanager85" username and "wrong" password
+     And user verify that "Invalid user name or password." message is displayed
