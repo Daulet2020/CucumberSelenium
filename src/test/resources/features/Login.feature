@@ -3,6 +3,6 @@ Feature: Login
 
   Scenario: Login as store manager
     Given user is on the login page
-    Then use logs in as store manager
+    Then user logs in as store manager
     And user verifies that "Dashboard" page subtitle is displayed
 

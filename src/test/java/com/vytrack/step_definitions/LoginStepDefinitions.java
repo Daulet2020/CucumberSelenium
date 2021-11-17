@@ -8,7 +8,7 @@ public class LoginStepDefinitions {
         System.out.println("I am on login page");
     }
 
-    @Then("use logs in as store manager")
+    @Then("user logs in as store manager")
     public void use_logs_in_as_store_manager() {
         System.out.println("Login as store manager");
     }
