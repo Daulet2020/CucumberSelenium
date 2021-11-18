@@ -1,5 +1,6 @@
 package com.vytrack.utilities;
 
+import com.vytrack.utilities.ConfigurationReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +15,7 @@ public class Driver {
     }
     public static WebDriver getDriver(){
         if(driver==null){
-            String browser = utils.ConfigurationReader.getProperty("browser");
+            String browser = ConfigurationReader.getProperty("browser");
             switch (browser){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();

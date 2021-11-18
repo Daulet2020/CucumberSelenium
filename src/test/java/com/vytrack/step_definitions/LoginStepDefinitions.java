@@ -1,11 +1,14 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.utilities.ConfigurationReader;
+import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.*;
 
 public class LoginStepDefinitions {
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         System.out.println("I am on login page");
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
     @Then("user logs in as store manager")

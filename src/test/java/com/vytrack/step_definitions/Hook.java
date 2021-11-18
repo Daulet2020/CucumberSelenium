@@ -1,5 +1,6 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.utilities.Driver;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -19,6 +20,7 @@ public class Hook {
             System.out.println("Cleanup!");
             System.out.println("Test completed!");
             System.out.println("################################");
+            Driver.close();
         }
     }
 
