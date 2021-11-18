@@ -4,6 +4,7 @@ import com.vytrack.pages.LoginPage;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.*;
+import org.junit.Assert;
 
 public class LoginStepDefinitions {
     LoginPage loginPage = new LoginPage();   //created login page object
@@ -25,6 +26,7 @@ public class LoginStepDefinitions {
 
     @Then("user verifies that {string} page subtitle is displayed")
     public void user_verifies_that_page_subtitle_is_displayed(String string) {
+        Assert.assertEquals(string, loginPage.getPageSubTitle());
         System.out.println("Verifying page subtitle: "+string);
     }
     @Then("user logs in as driver")

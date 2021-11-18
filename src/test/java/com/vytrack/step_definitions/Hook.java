@@ -11,13 +11,13 @@ public class Hook {
     public void setup(){
         System.out.println("##############################");
         System.out.println("Test setup!");
+        Driver.get().manage().window().maximize();
             }
     @After
     public void teardown(Scenario scenario){
         if(scenario.isFailed()){
             System.out.println("Test failed");
         } else {
-            System.out.println("Cleanup!");
             System.out.println("Test completed!");
             System.out.println("################################");
             Driver.close();
