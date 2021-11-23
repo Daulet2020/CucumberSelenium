@@ -59,7 +59,6 @@ public class LoginStepDefinitions {
     @Then("user verify that {string} message is displayed")
     public void user_verify_that_message_is_displayed(String string) {
         System.out.println("Verified that warning message is displayed: "+string);
-
     }
 
 
