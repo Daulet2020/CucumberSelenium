@@ -11,3 +11,11 @@ Feature: Smoke test
   Scenario: Verify Manage Dashboards page
     Then user navigates to "Dashboards" then to "Manage Dashboards"
     And user verifies that "All Manage Dashboards" page subtitle is displayed
+
+  Scenario: Verify Vehicle page
+    Then user navigates to "Fleet" then to "Vehicles"
+    And user verifies that "All Cars" page subtitle is displayed
+
+  Scenario: Verify Account page
+    Then user navigates to "Customers" then to "Accounts"
+    And user verifies that "All Accounts" page subtitle is displayed

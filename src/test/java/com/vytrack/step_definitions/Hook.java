@@ -20,7 +20,7 @@ public class Hook {
         if(scenario.isFailed()){
             System.out.println("Test failed");
             byte[] screnshot = ((TakesScreenshot)Driver.get()).getScreenshotAs(OutputType.BYTES);
-            scenario.embed(screnshot, "image/png");
+            scenario.embed(screnshot, "image/png", "name of screenshot");
         } else {
             System.out.println("Test completed!");
             System.out.println("################################");
