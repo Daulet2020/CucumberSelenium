@@ -26,6 +26,9 @@ public class LoginPage extends BasePage {
     @FindBy(css = "[class='alert alert-error']")
     public WebElement warningMessage;
 
+    @FindBy(xpath = "//*[@class='alert alert-error']")
+    public WebElement errorMessage;
+
     public LoginPage() {
         //it's mandatory if you want to use @FindBy annotation
         //this means LoginPage class

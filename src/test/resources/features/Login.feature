@@ -12,6 +12,12 @@ Feature: Login
     Then user logs in as driver
     And user verifies that "Dashboard" page subtitle is displayed
 
+  @driver_negative
+  Scenario: Driver login negative
+    Given user is on the login page
+    Then user logs in as driver
+    And verify user can't log in
+
   Scenario: Login as sales manager
     Given user is on the login page
     Then user logs in as sales manager

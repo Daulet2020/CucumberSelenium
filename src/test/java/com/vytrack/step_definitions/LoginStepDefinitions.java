@@ -1,6 +1,7 @@
 package com.vytrack.step_definitions;
 
 import com.vytrack.pages.LoginPage;
+import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.*;
@@ -29,10 +30,19 @@ public class LoginStepDefinitions {
         Assert.assertEquals(string, loginPage.getPageSubTitle());
         System.out.println("Verifying page subtitle: "+string);
     }
+
     @Then("user logs in as driver")
     public void user_logs_in_as_driver() {
-        System.out.println("Login as driver");
+        String userName = ConfigurationReader.getProperty("driver_username");
+        String password = ConfigurationReader.getProperty("driver_password");
+        loginPage.login(userName, password);
+        System.out.println("Logged in as driver");
+    }
 
+    @Then("verify user can't log in")
+    public void verify_user_can_t_log_in() {
+        loginPage.errorMessage.isDisplayed();
+        System.out.println("Error message is displayed");
     }
 
     @Then("user logs in as sales manager")
