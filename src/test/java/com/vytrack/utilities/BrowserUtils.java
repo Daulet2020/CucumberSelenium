@@ -7,10 +7,12 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.function.Function;
 
-public class BrowserUtils {
+public class BrowserUtils<listOfWebElements> {
 
     //It will be used to pause our test execution
     //just provide number of seconds as a parameter
@@ -171,6 +173,19 @@ public class BrowserUtils {
     public static void waitForPageTitle(String pageTitle) {
         WebDriverWait wait = new WebDriverWait(Driver.get(), 10);
         wait.until(ExpectedConditions.titleIs(pageTitle));
+
+    }
+    /*This method will convert list of webelement into list of string
+    @param listOfWebElements
+    @return list of string
+    */
+    public List<String> getListOfString (List<WebElement> listOfWebElements){
+        List<String> stringList = new ArrayList<>();
+        for (WebElement element : listOfWebElements){
+            stringList.add(element.getText().trim());
+         }
+        return stringList;
+
 
     }
 
