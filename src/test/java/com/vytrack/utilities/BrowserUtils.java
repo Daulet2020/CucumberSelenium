@@ -179,7 +179,7 @@ public class BrowserUtils<listOfWebElements> {
     @param listOfWebElements
     @return list of string
     */
-    public List<String> getListOfString (List<WebElement> listOfWebElements){
+    public static List<String> getListOfString(List<WebElement> listOfWebElements){
         List<String> stringList = new ArrayList<>();
         for (WebElement element : listOfWebElements){
             stringList.add(element.getText().trim());
