@@ -18,7 +18,7 @@ public class CalendarEventsPage extends BasePage {
         @FindBy(css = "button[class*='btn dropdown-toggle']")
         public WebElement viewPerPageToggle;
 
-        @FindBy()
+        @FindBy(css= "[class*='btn-group'] [class='dropdown-menu pull-right'] li")
         public List<WebElement> viewPerPageOptions;
 
         public void clickToCreateCalendarEvent(){
@@ -29,6 +29,12 @@ public class CalendarEventsPage extends BasePage {
 
         public List<String> getColumnNames(){
                 return BrowserUtils.getListOfString(columnNames);
+        }
+
+        public List<String> getViewPerPageOptions(){
+                BrowserUtils.waitForVisibility(viewPerPageToggle, 5);
+                BrowserUtils.clickWithWait(viewPerPageToggle);
+                return BrowserUtils.getListOfString(viewPerPageOptions);
         }
 
 }
