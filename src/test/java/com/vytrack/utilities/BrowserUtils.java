@@ -182,7 +182,10 @@ public class BrowserUtils<listOfWebElements> {
     public static List<String> getListOfString(List<WebElement> listOfWebElements){
         List<String> stringList = new ArrayList<>();
         for (WebElement element : listOfWebElements){
-            stringList.add(element.getText().trim());
+            String value = element.getText().trim();
+            if(value.length()>0) {
+                stringList.add(value);
+            }
          }
         return stringList;
 
