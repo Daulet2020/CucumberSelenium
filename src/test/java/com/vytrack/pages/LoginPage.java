@@ -57,10 +57,10 @@ public class LoginPage extends BasePage {
             case "driver":
                 userName = ConfigurationReader.getProperty("driver.username");
                 break;
-            case "store.manager":
+            case "store manager":
                 userName= ConfigurationReader.getProperty("store.manager.username");
                 break;
-            case "sales.manager":
+            case "sales manager":
                 userName= ConfigurationReader.getProperty("sales.manager.username");
                 break;
             default:
