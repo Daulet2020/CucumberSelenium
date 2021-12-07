@@ -50,7 +50,6 @@ public class LoginStepDefinitions {
     @Then("user logs in as sales manager")
     public void user_logs_in_as_sales_manager() {
         System.out.println("Loginn as sales manager");
-
     }
     //     Then user enters "storemanager85" username and "wrong" password
     @Then("user enters {string} username and {string} password")
@@ -70,7 +69,6 @@ public class LoginStepDefinitions {
     public void user_logs_in_as_driver_with_following_credentials(Map<String, String> dataTable) {
         System.out.println(dataTable);
         loginPage.login(dataTable.get("username"), dataTable.get("password"));
-
     }
 
     @Given("user logs in as {string}")
