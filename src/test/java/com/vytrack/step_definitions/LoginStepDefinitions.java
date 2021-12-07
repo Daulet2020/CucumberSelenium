@@ -73,6 +73,12 @@ public class LoginStepDefinitions {
 
     }
 
+    @Given("user logs in as {string}")
+    public void user_logs_in_as(String role) {
+        loginPage.login(role);
+    }
+
+
 
 
 
