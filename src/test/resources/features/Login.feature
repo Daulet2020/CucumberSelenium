@@ -92,7 +92,8 @@ Feature: Login
       | driver  | Fleet       | Vehicles          |   Car - Entities - System - Car - Entities - System               |
       | driver  | Fleet       | Vehicle Model     |   Vehicles Model - Entities - System - Car - Entities - System    |
       | driver  | Customers   | Accounts          |   Accounts - Customers                                            |
-      | driver  | Customers   | Contacts          |   Calendar Events - Activities                                    |
+      | driver  | Customers   | Contacts          |   Contacts - Customers                                            |
+      | driver  | Activities  | Calendar Events   |   Calendar Events - Activities                                    |
       | driver  | System      | Jobs              |   Jobs - System                                                   |
 
 
