@@ -88,12 +88,12 @@ Feature: Login
     Then the page title should be "<title>"
 
     Examples:
-      | role    | module      | sub module        | title                                                 |
-      | driver  | Fleet       | Vehicles          |   Car - Entities - System - Car - Entities - System   |
-      | driver  | Fleet       | Vehicle Model     |   Car - Entities - System - Car - Entities - System   |
-      | driver  | Customers   | Accounts          |   Accounts - Customers                                |
-      | driver  | Customers   | Contacts          |   Calendar Events - Activities                        |
-      | driver  | System      | Jobs              |   Jobs - System                                       |
+      | role    | module      | sub module        | title                                                             |
+      | driver  | Fleet       | Vehicles          |   Car - Entities - System - Car - Entities - System               |
+      | driver  | Fleet       | Vehicle Model     |   Vehicles Model - Entities - System - Car - Entities - System    |
+      | driver  | Customers   | Accounts          |   Accounts - Customers                                            |
+      | driver  | Customers   | Contacts          |   Calendar Events - Activities                                    |
+      | driver  | System      | Jobs              |   Jobs - System                                                   |
 
 
 
