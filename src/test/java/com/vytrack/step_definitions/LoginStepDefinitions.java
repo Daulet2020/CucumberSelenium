@@ -55,6 +55,7 @@ public class LoginStepDefinitions {
     @Then("user enters {string} username and {string} password")
     public void user_enters_username_and_password(String string, String string2) {
         System.out.println("Login with "+string+" username and "+string2+" password.");
+        loginPage.login(string, string2);
     }
 
     @Then("user verify that {string} message is displayed")
