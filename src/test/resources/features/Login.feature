@@ -90,7 +90,7 @@ Feature: Login
     Examples:
       | role    | module      | sub module        | title                                                             |
       | driver  | Fleet       | Vehicles          |   Car - Entities - System - Car - Entities - System               |
-      | driver  | Fleet       | Vehicle Model     |   Vehicles Model - Entities - System - Car - Entities - System    |
+      | driver  | Fleet       | Vehicles Model    |   Vehicles Model - Entities - System - Car - Entities - System    |
       | driver  | Customers   | Accounts          |   Accounts - Customers                                            |
       | driver  | Customers   | Contacts          |   Contacts - Customers                                            |
       | driver  | Activities  | Calendar Events   |   Calendar Events - Activities                                    |
