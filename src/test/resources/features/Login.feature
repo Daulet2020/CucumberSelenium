@@ -81,7 +81,7 @@ Feature: Login
     | salesmanager110 | UserUser123   |
 
     @login_with_roles_ddt_2
-  Scenario Outline: Login as "<role>" and verify "<title>" page title is correct
+  Scenario Outline: Login as <role> and verify <title> page title is correct
     Given user is on the login page
     And user logs in as "<role>"
     When user navigates to "<module>" then to "<sub module>"
@@ -106,7 +106,14 @@ Feature: Login
         | sales manager  | Activities  | Calendar Events   |   Calendar Events - Activities                                    |
         | sales manager  | System      | Jobs              |   Jobs - System                                                   |
 
-
+      Examples: store managers
+        | role           | module      | sub module        | title                                                             |
+        | store manager  | Fleet       | Vehicles          |   Car - Entities - System - Car - Entities - System               |
+        | store manager  | Fleet       | Vehicles Model    |   Vehicles Model - Entities - System - Car - Entities - System    |
+        | store manager  | Customers   | Accounts          |   Accounts - Customers                                            |
+        | store manager  | Customers   | Contacts          |   Contacts - Customers                                            |
+        | store manager  | Activities  | Calendar Events   |   Calendar Events - Activities                                    |
+        | store manager  | System      | Jobs              |   Jobs - System                                                   |
 
 
 
