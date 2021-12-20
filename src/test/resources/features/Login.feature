@@ -87,7 +87,7 @@ Feature: Login
     When user navigates to "<module>" then to "<sub module>"
     Then the page title should be "<title>"
 
-    Examples:
+    Examples: drivers
       | role    | module      | sub module        | title                                                             |
       | driver  | Fleet       | Vehicles          |   Car - Entities - System - Car - Entities - System               |
       | driver  | Fleet       | Vehicles Model    |   Vehicles Model - Entities - System - Car - Entities - System    |
@@ -97,7 +97,14 @@ Feature: Login
       | driver  | System      | Jobs              |   Jobs - System                                                   |
 
 
-
+      Examples: sales managers
+        | role           | module      | sub module        | title                                                             |
+        | sales manager  | Fleet       | Vehicles          |   Car - Entities - System - Car - Entities - System               |
+        | sales manager  | Fleet       | Vehicles Model    |   Vehicles Model - Entities - System - Car - Entities - System    |
+        | sales manager  | Customers   | Accounts          |   Accounts - Customers                                            |
+        | sales manager  | Customers   | Contacts          |   Contacts - Customers                                            |
+        | sales manager  | Activities  | Calendar Events   |   Calendar Events - Activities                                    |
+        | sales manager  | System      | Jobs              |   Jobs - System                                                   |
 
 
 
