@@ -7,6 +7,6 @@ Feature: Create new car
     Then user navigates to "Fleet" then to "Vehicles"
     And user click on "Create Car" button
     Then user adds new car information:
-      |License Plate  | Driver      |Location       |Model Year       |Color |
-      | TestPlates    |Test Driver  |Washington D.C.| 2020            |Black|
-      | CoolPlates    |Pro Driver   |Reston, VA     | 2011            |White|
+      |License Plate  | Driver       |Location       |Model Year       |Color |
+      | TestPlates    |Test Driver   |Washington D.C.| 2020            |Black|
+      | SuperMan      |Cool Driver   |Texas          | 2011            |White|
