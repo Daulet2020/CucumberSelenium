@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class CreateCarPage extends BasePage {
 
-    @FindBy(css = "[id^='custom_entity_type_LicensePlate']")
+    @FindBy(xpath = "//*[contains(@id, 'custom_entity_type_LicensePlate')]")
     public WebElement licensePlateElement;
 
     @FindBy(name = "custom_entity_type[Driver]")
@@ -61,7 +61,7 @@ public class CreateCarPage extends BasePage {
         String locator = "//label[text()='" + tagName + "']/preceding-sibling::input[@type='checkbox']";
         WebElement checkBox = Driver.get().findElement(By.xpath(locator));
         BrowserUtils.waitForVisibility(checkBox, 15);
-        BrowserUtils.waitForClickablility(checkBox, 15);
+        BrowserUtils.waitForClickablility(checkBox, 20);
         if (!checkBox.isSelected()) {
             checkBox.click();
         }

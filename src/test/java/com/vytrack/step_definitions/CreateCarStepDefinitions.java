@@ -32,10 +32,13 @@ public class CreateCarStepDefinitions {
     public void user_adds_new_car_information(List<Map<String, String>> dataTable) {
         //as many rows of data you have, it will create cars
         //wait
+        System.out.println("started this step");
         createCarPage.waitUntilLoaderMaskDisappear();
         System.out.println(dataTable);
         int row = 1;
         for (Map<String, String> map : dataTable) {
+            BrowserUtils.wait(2);
+//            createCarPage.licensePlateElement.click();
             createCarPage.licensePlateElement.sendKeys(map.get("License Plate"));
             createCarPage.driverElement.sendKeys(map.get("Driver"));
             createCarPage.locationElement.sendKeys(map.get("Location"));
