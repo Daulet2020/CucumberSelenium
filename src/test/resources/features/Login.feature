@@ -1,6 +1,13 @@
 Feature: Login
   As user, I want to be able to log in into vytrack under different roles with username and password
 
+@login
+  Given I login page
+  When I enter "user name" in user name field
+  And I enter the "password" to the password field
+  And I press the "login" button
+  Then I should see the "welcome" page
+
   @store_manager
   Scenario: Login as store manager
     Given user is on the login page
